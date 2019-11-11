@@ -16,8 +16,8 @@ class App extends Component {
   };
 
   render() {
-    const name = "React SideNav";
-    const url = "https://github.com/trendmicro-frontend/react-sidenav";
+    const name = "React Eco System";
+    const url = "";
 
     return (
       <div>
