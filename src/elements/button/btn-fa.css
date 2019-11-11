@@ -1,0 +1,30 @@
+.btn.btn-compact :global .fa {
+    margin-right: 0;
+}
+
+.btn :global .fa {
+    font-size: 14px;
+    margin-right: 8px;
+}
+
+.btn :global i.fa,
+.btn :global span.fa {
+    font-size: 14px;
+    color: #666;
+}
+
+.btn-primary :global i.fa,
+.btn-danger :global i.fa,
+.btn-primary :global span.fa,
+.btn-danger :global span.fa {
+    color: inherit;
+}
+
+.btn-lg.btn :global i.fa,
+.btn-sm.btn :global i.fa,
+.btn-xs.btn :global i.fa,
+.btn-lg.btn :global span.fa,
+.btn-sm.btn :global span.fa,
+.btn-xs.btn :global span.fa {
+    font-size: inherit;
+}

@@ -1,0 +1,19 @@
+.btn-lg.btn :global i.svg,
+.btn-lg.btn :global span.svg {
+    width: 24px;
+    height: 24px;
+}
+
+.btn :global i.svg,
+.btn :global span.svg {
+    width: 16px;
+    height: 16px;
+}
+
+.btn-sm.btn :global i.svg,
+.btn-xs.btn :global i.svg,
+.btn-sm.btn :global span.svg,
+.btn-xs.btn :global span.svg {
+    width: 12px;
+    height: 12px;
+}

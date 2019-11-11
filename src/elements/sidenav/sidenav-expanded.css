@@ -1,0 +1,86 @@
+.sidenav.expanded {
+    min-width: 240px;
+}
+
+.sidenav.expanded .sidenav-nav>.sidenav-navitem .navicon+.navtext {
+    display: inline-block;
+}
+
+.sidenav.expanded .sidenav-nav>.sidenav-navitem.expandable>.navitem {
+    cursor: pointer;
+}
+
+.sidenav.expanded .sidenav-subnav {
+    position: static;
+    border: none;
+    float: left;
+    clear: both;
+    width: 100%;
+    background: transparent;
+    overflow: hidden;
+    box-shadow: none;
+}
+
+.sidenav.expanded .sidenav-nav>.sidenav-navitem.expanded .sidenav-subnav {
+    display: block;
+}
+
+.sidenav.expanded .sidenav-subnav {
+    display: none;
+}
+
+.sidenav.expanded .sidenav-subnav>.sidenav-subnavitem {
+    position: relative;
+}
+
+.sidenav.expanded .sidenav-subnav>.sidenav-subnavitem::before {
+    content: " ";
+    width: 100%;
+    height: 28px;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.sidenav.expanded .sidenav-subnav>.sidenav-subnavitem:first-child {
+    display: none;
+}
+
+.sidenav.expanded .sidenav-subnav>.sidenav-subnavitem:hover::before {
+    background: #fff;
+    opacity: 0.15;
+}
+
+.sidenav.expanded .sidenav-subnav>.sidenav-subnavitem::before {
+    content: " ";
+    width: 100%;
+    height: 28px;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.sidenav.expanded .sidenav-subnav>.sidenav-subnavitem.selected>.navitem {
+    color: #fff;
+}
+
+.sidenav.expanded .sidenav-subnav>.sidenav-subnavitem.selected>.navitem::before {
+    content: " ";
+    width: 2px;
+    height: 20px;
+    left: 10px;
+    top: 4px;
+    position: absolute;
+    border-left: 2px #fff solid;
+}
+
+.sidenav.expanded .sidenav-subnav>.sidenav-subnavitem:hover>.navitem {
+    background: transparent;
+    color: #fff;
+}
+
+.sidenav.expanded .sidenav-subnav>.sidenav-subnavitem>.navitem {
+    color: #f9dcdd;
+    padding: 0 14px 0 20px;
+    line-height: 28px;
+}

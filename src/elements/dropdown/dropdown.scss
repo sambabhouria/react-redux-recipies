@@ -1,0 +1,17 @@
+.dropdown {
+
+    box-sizing: border-box;
+
+    &:hover {
+        background: DarkCyan;
+    }
+
+    &::before,
+    ::after {
+        box-sizing: inherit;
+    }
+
+    line-height: 20px;
+
+
+}

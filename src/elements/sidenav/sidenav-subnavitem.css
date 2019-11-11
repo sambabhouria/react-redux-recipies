@@ -1,0 +1,37 @@
+.sidenav-subnav > .sidenav-subnavitem:first-child {
+    margin: 0 24px;
+    line-height: 48px;
+    border-bottom: 1px #ccc solid;
+    font-size: 14px;
+    font-weight: normal;
+  }
+  .sidenav-subnav > .sidenav-subnavitem:nth-child(2) {
+    margin-top: 8px;
+  }
+  .sidenav-subnav > .sidenav-subnavitem:last-child {
+    margin-bottom: 8px;
+  }
+  .sidenav-subnav > .sidenav-subnavitem.selected > .navitem {
+    color: #db3d44;
+    font-weight: bold;
+    background: none;
+    cursor: default;
+  }
+  .sidenav-subnav > .sidenav-subnavitem.selected > .navitem:hover {
+    background: #fff;
+  }
+  .sidenav-subnav > .sidenav-subnavitem > .navitem {
+    display: block;
+    text-decoration: none;
+    color: #222;
+    font-size: 13px;
+    line-height: 30px;
+    padding: 0 24px;
+    cursor: pointer;
+  }
+  .sidenav-subnav > .sidenav-subnavitem > .navitem:hover {
+    background: #eee;
+  }
+  .sidenav-subnav > .sidenav-subnavitem > .navitem:focus {
+    outline: 0;
+  }

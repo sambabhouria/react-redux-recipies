@@ -1,0 +1,15 @@
+@import url("sidenav.css");
+@import url("sidenav-collapsed.css");
+@import url("sidenav-expanded.css");
+@import url("sidenav-toggle.css");
+@import url("sidenav-nav.css");
+@import url("sidenav-navitem.css");
+@import url("sidenav-subnav.css");
+@import url("sidenav-subnavitem.css");
+
+.sidenav {
+    box-sizing: border-box;
+    box-sizing: border-box;
+    line-height: 20px;
+
+}

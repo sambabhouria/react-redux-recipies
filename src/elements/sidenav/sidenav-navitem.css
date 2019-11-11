@@ -1,0 +1,118 @@
+.sidenav-nav>.sidenav-navitem {
+  clear: both;
+  position: relative;
+}
+
+.sidenav-nav>.sidenav-navitem.highlighted>.navitem {
+  cursor: default;
+  background-color: #db3d44;
+  border-color: #db3d44;
+  margin-top: 2px;
+
+}
+
+.sidenav-nav>.sidenav-navitem:hover>.navitem::after {
+  background: #fff;
+  opacity: 0.15;
+}
+
+.sidenav-nav>.sidenav-navitem.highlighted>.navitem::after,
+.sidenav-nav>.sidenav-navitem:hover.highlighted>.navitem::after {
+  background: #000;
+  opacity: 0.2;
+}
+
+/* .sidenav-subnav>.sidenav-subnavitem.selected>.navitem {
+  color: #db3d44;
+  font-weight: bold;
+  background: none;
+  cursor: default;
+} */
+
+.sidenav-nav>.sidenav-navitem.highlighted.expanded>.navitem::after,
+.sidenav-nav>.sidenav-navitem:hover.highlighted.expanded>.navitem::after {
+  background: #000;
+  opacity: 0.25;
+}
+
+.sidenav-nav>.sidenav-navitem.highlighted.selected.expanded>.navitem::after,
+.sidenav-nav>.sidenav-navitem:hover.highlighted.selected.expanded>.navitem::after {
+  background: #000;
+  opacity: 0.2;
+}
+
+.sidenav-nav>.sidenav-navitem:hover>.navitem .navicon,
+.sidenav-nav>.sidenav-navitem.highlighted>.navitem .navicon {
+  opacity: 1;
+}
+
+.sidenav-nav>.sidenav-navitem:hover>.navitem .navicon,
+.sidenav-nav>.sidenav-navitem:hover>.navitem .navtext,
+.sidenav-nav>.sidenav-navitem.highlighted>.navitem .navicon,
+.sidenav-nav>.sidenav-navitem.highlighted>.navitem .navtext {
+  color: #fff;
+}
+
+.sidenav-nav>.sidenav-navitem:hover>.navitem .navicon>*,
+.sidenav-nav>.sidenav-navitem:hover>.navitem .navtext>*,
+.sidenav-nav>.sidenav-navitem.highlighted>.navitem .navicon>*,
+.sidenav-nav>.sidenav-navitem.highlighted>.navitem .navtext>* {
+  color: #fff;
+}
+
+.sidenav-nav>.sidenav-navitem>.navitem {
+  position: relative;
+  display: block;
+  line-height: 50px;
+  height: 50px;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.sidenav-nav>.sidenav-navitem>.navitem:focus {
+  outline: 0;
+}
+
+.sidenav-nav>.sidenav-navitem>.navitem::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  opacity: 0;
+  z-index: -1;
+}
+
+.sidenav-nav>.sidenav-navitem>.navitem .navicon,
+.sidenav-nav>.sidenav-navitem>.navitem .navtext {
+  color: #f9dcdd;
+}
+
+.sidenav-nav>.sidenav-navitem>.navitem .navicon>*,
+.sidenav-nav>.sidenav-navitem>.navitem .navtext>* {
+  color: #f9dcdd;
+}
+
+.sidenav-nav>.sidenav-navitem>.navitem .navicon {
+  display: block;
+  float: left;
+  width: 64px;
+  height: 50px;
+  margin-right: -6px;
+  vertical-align: top;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
+  opacity: 0.7;
+  line-height: 50px;
+  text-align: center;
+}
+
+.sidenav-nav>.sidenav-navitem>.navitem .navicon+.navtext {
+  display: none;
+}

@@ -1,0 +1,16 @@
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.btn-block.btn+.btn-block.btn,
+.btn-block+.btn-block {
+    margin-left: 0;
+    margin-top: 8px;
+}
+
+input[type="submit"].btn-block,
+input[type="reset"].btn-block,
+input[type="button"].btn-block {
+    width: 100%;
+}

@@ -1,0 +1,67 @@
+.btn {
+    display: inline-block;
+    min-width: 80px;
+    padding: 5px 12px;
+    margin-bottom: 0;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 20px;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    user-select: none;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+    outline: none;
+}
+
+.btn:hover,
+.btn.hover,
+.btn:focus,
+.btn.focus {
+    color: #222;
+    text-decoration: none;
+}
+
+.btn:active,
+.btn.active {
+    outline: none;
+    background-image: none;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1) inset;
+}
+
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
+    cursor: not-allowed;
+    opacity: 0.4;
+}
+
+a .btn.disabled,
+fieldset[disabled] a .btn {
+    pointer-events: none;
+}
+
+.btn+.btn {
+    margin-left: 8px;
+}
+
+.btn>[class*="loader-container"] {
+    display: inline-block;
+}
+
+.btn>[class*="loader-container"]>[class*="loader"] {
+    margin-top: 2px;
+    margin-right: 8px;
+}
