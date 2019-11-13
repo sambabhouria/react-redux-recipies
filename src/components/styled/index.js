@@ -1,6 +1,12 @@
 import Breadcrumbs from "@trendmicro/react-breadcrumbs";
 import ensureArray from "ensure-array";
-import React, { PureComponent } from "react";
+import React, { PureComponent, Fragment } from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
 import styled from "styled-components";
 import SideNav, {
   Toggle,
@@ -111,75 +117,83 @@ export default class extends PureComponent {
     const { expanded, selected } = this.state;
 
     return (
-      <div>
-        <SideNav
-          style={{ minWidth: expanded ? navWidthExpanded : navWidthCollapsed }}
-          onSelect={this.onSelect}
-          onToggle={this.onToggle}
-        >
-          <Toggle />
-          <NavHeader expanded={expanded}>
-            <NavTitle>Side Navigation</NavTitle>
-            <NavSubTitle>Styled Side Navigation</NavSubTitle>
-          </NavHeader>
-          {expanded && (
-            <NavInfoPane>
-              <div>Time: {this.lastUpdateTime}</div>
-              <div>User: admin</div>
-            </NavInfoPane>
+      <Router>
+        <Route
+          render={({ location, history }) => (
+            <Fragment>
+              <SideNav
+                style={{
+                  minWidth: expanded ? navWidthExpanded : navWidthCollapsed,
+                }}
+                onSelect={this.onSelect}
+                onToggle={this.onToggle}
+              >
+                <Toggle />
+                <NavHeader expanded={expanded}>
+                  <NavTitle>Side Navigation</NavTitle>
+                  <NavSubTitle>Styled Side Navigation</NavSubTitle>
+                </NavHeader>
+                {expanded && (
+                  <NavInfoPane>
+                    <div>Time: {this.lastUpdateTime}</div>
+                    <div>User: admin</div>
+                  </NavInfoPane>
+                )}
+                <Nav defaultSelected={selected}>
+                  <NavItem eventKey="home">
+                    <NavIcon>
+                      <i
+                        className="fa fa-fw fa-home"
+                        style={{ fontSize: "1.75em", verticalAlign: "middle" }}
+                      />
+                    </NavIcon>
+                    <NavText style={{ paddingRight: 32 }} title="HOME">
+                      HOME
+                    </NavText>
+                  </NavItem>
+                  <NavItem eventKey="devices">
+                    <NavIcon>
+                      <i
+                        className="fa fa-fw fa-line-chart"
+                        style={{ fontSize: "1.75em", verticalAlign: "middle" }}
+                      />
+                    </NavIcon>
+                    <NavText style={{ paddingRight: 32 }} title="DEVICES">
+                      DEVICES
+                    </NavText>
+                  </NavItem>
+                  <NavItem eventKey="reports">
+                    <NavIcon>
+                      <i
+                        className="fa fa-fw fa-list-alt"
+                        style={{ fontSize: "1.75em", verticalAlign: "middle" }}
+                      />
+                    </NavIcon>
+                    <NavText style={{ paddingRight: 32 }} title="REPORTS">
+                      REPORTS
+                    </NavText>
+                  </NavItem>
+
+                  <Separator />
+
+                  <NavItem eventKey="logout">
+                    <NavIcon>
+                      <i
+                        className="fa fa-fw fa-power-off"
+                        style={{ fontSize: "1.5em" }}
+                      />
+                    </NavIcon>
+                    <NavText style={{ paddingRight: 32 }} title="SIGN OUT">
+                      SIGN OUT
+                    </NavText>
+                  </NavItem>
+                </Nav>
+              </SideNav>
+              <Main expanded={expanded}>{this.renderBreadcrumbs()}</Main>
+            </Fragment>
           )}
-          <Nav defaultSelected={selected}>
-            <NavItem eventKey="home">
-              <NavIcon>
-                <i
-                  className="fa fa-fw fa-home"
-                  style={{ fontSize: "1.75em", verticalAlign: "middle" }}
-                />
-              </NavIcon>
-              <NavText style={{ paddingRight: 32 }} title="HOME">
-                HOME
-              </NavText>
-            </NavItem>
-            <NavItem eventKey="devices">
-              <NavIcon>
-                <i
-                  className="fa fa-fw fa-line-chart"
-                  style={{ fontSize: "1.75em", verticalAlign: "middle" }}
-                />
-              </NavIcon>
-              <NavText style={{ paddingRight: 32 }} title="DEVICES">
-                DEVICES
-              </NavText>
-            </NavItem>
-            <NavItem eventKey="reports">
-              <NavIcon>
-                <i
-                  className="fa fa-fw fa-list-alt"
-                  style={{ fontSize: "1.75em", verticalAlign: "middle" }}
-                />
-              </NavIcon>
-              <NavText style={{ paddingRight: 32 }} title="REPORTS">
-                REPORTS
-              </NavText>
-            </NavItem>
-
-            <Separator />
-
-            <NavItem eventKey="logout">
-              <NavIcon>
-                <i
-                  className="fa fa-fw fa-power-off"
-                  style={{ fontSize: "1.5em" }}
-                />
-              </NavIcon>
-              <NavText style={{ paddingRight: 32 }} title="SIGN OUT">
-                SIGN OUT
-              </NavText>
-            </NavItem>
-          </Nav>
-        </SideNav>
-        <Main expanded={expanded}>{this.renderBreadcrumbs()}</Main>
-      </div>
+        />
+      </Router>
     );
   }
 }
