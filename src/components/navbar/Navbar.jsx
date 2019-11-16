@@ -1,7 +1,8 @@
 import classNames from "classnames";
 import PropTypes from "prop-types";
 import React, { Component } from "react";
-import { Button } from './../../elements/button';
+import { Button } from "@trendmicro/react-buttons";
+
 import "./Navbar.css";
 
 export default class extends Component {
@@ -53,7 +54,7 @@ export default class extends Component {
                 window.location = url;
               }}
             >
-              <i className="fa fa-github" />
+              <i className="fab fa-github" />
               GitHub
             </Button>
           </div>
