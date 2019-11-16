@@ -10,6 +10,7 @@ import Navbar from "./components/navbar/Navbar";
 import DefaultSideNav from "./components/default";
 import StyledSideNav from "./components/styled";
 import "./components/navbar/Navbar.css";
+import "./assets/fontawesome/css/all.min.css";
 
 class App extends Component {
   state = {
@@ -17,7 +18,7 @@ class App extends Component {
   };
 
   render() {
-    const name = "React Eco System";
+    const name = "React-Redux Eco System";
     const url = "";
 
     return (
