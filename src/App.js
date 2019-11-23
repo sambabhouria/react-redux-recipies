@@ -12,6 +12,8 @@ import DefaultSideNav from "./components/default";
 import StyledSideNav from "./components/styled";
 import "./components/navbar/Navbar.css";
 import "./assets/fontawesome/css/all.min.css";
+import "./assets/fontawesome/css/tachyons.min.css";
+import "./assets/fontawesome/css/selected.css";
 
 class App extends Component {
   state = {

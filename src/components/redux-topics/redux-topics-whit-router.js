@@ -1,6 +1,7 @@
 import React from "react";
 import { Switch, Route, Link } from "react-router-dom";
-import { Async } from "../tab-tab/components";
+
+import { Basic } from "../tab-tab/components/basic-tab";
 
 import { useParams, useRouteMatch } from "react-router";
 function Topic() {
@@ -37,7 +38,7 @@ const ReduxTpics = () => {
       <Switch>
         <Route exact path={path}>
           <h3>Please select a topic.</h3>
-          <Async />
+          <Basic />
         </Route>
         <Route path={`${path}/:topicId`}>
           <Topic />

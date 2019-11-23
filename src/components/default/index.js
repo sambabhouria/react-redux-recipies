@@ -1,10 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  useHistory,
-  useLocation,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import { Button, ButtonGroup } from "@trendmicro/react-buttons";
 import Dropdown, { MenuItem } from "@trendmicro/react-dropdown";
@@ -40,7 +34,7 @@ export default class extends PureComponent {
   };
 
   render() {
-    const { expanded, selected } = this.state;
+    const { expanded } = this.state;
 
     return (
       <div>

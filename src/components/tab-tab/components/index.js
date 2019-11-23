@@ -1,2 +1,3 @@
 import Async from "./async-tab";
-export { Async };
+import Basic from "./basic-tab";
+export { Basic, Async };

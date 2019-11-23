@@ -4,8 +4,8 @@ const Svg = ({ d }) => (
   <svg
     viewBox="0 0 40 40"
     fill="currentColor"
-    height="1em"
-    width="1em"
+    height="2.5em"
+    width="2.5em"
     style={{ verticalAlign: "middle" }}
   >
     <g>

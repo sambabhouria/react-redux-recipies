@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Tabs, TabList, Tab, PanelList, AsyncPanel, Panel } from "../elements";
+
 import { Facebook } from "react-content-loader";
-// import "./css/tachyons.min.css";
+
 const MyFacebookLoader = () => <Facebook />;
 
 function fakeCbFetch(cb) {
@@ -25,7 +26,7 @@ function fakePromiseFetch() {
 export default class Basic extends Component {
   render() {
     return (
-      <Tabs customStyle={this.props.customStyle}>
+      <Tabs>
         <TabList>
           <Tab>Normal panel</Tab>
           <Tab>Callback fetch panel</Tab>
