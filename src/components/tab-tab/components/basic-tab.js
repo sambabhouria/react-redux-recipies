@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { Tabs, TabList, Tab, PanelList, Panel } from "../elements";
- import {TodoApp} from "../../../components/todos"
+
+import { CounterApp } from "../../../components/counter";
+import { TodoApp } from "../../../components/todos";
+import { Introduction } from "../../../components/introduction";
 
 export default class Basic extends Component {
   render() {
@@ -8,9 +11,11 @@ export default class Basic extends Component {
       <Tabs customStyle={this.props.customStyle}>
         <TabList>
           <Tab>
+            <i className="fas fa-list-ol"></i> Introduction
+          </Tab>
+          <Tab>
             <i className="fas fa-list-ol"></i> Counter
           </Tab>
-
           <Tab>
             <i className="fas fa-th-list"></i> Todos List
           </Tab>
@@ -22,16 +27,19 @@ export default class Basic extends Component {
           </Tab>
         </TabList>
         <PanelList>
-          <Panel>counter example will go here </Panel>
-
           <Panel>
-             <TodoApp />
+            {" "}
+            <Introduction />
+          </Panel>
+          <Panel>
+            {" "}
+            <CounterApp />
+          </Panel>
+          <Panel>
+            <TodoApp />
           </Panel>
           <Panel>shopping cart go here</Panel>
-          <Panel>
-             Ashynchonisation go out here
-           
-          </Panel>
+          <Panel>Ashynchonisation go out here</Panel>
         </PanelList>
       </Tabs>
     );

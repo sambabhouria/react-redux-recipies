@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 import ReactMarkdown from "react-markdown";
 import readmePath from "./README.md";
+import "./readme.css";
+
+const style = {
+  background: "#f9dcdd",
+};
+
 class Readme extends Component {
   constructor(props) {
     super(props);
@@ -17,9 +23,8 @@ class Readme extends Component {
   }
   render() {
     return (
-      <div className="content">
-          Readme going here
-        {/* <ReactMarkdown source={this.state.readme} /> */}
+      <div style={style} className="readmeContainer">
+        <ReactMarkdown source={this.state.readme} />
       </div>
     );
   }
