@@ -5,6 +5,8 @@ import { CounterApp } from "../../../components/counter";
 import { TodoApp } from "../../../components/todos";
 import { Introduction } from "../../../components/introduction";
 
+import { OngletApp } from "../../../components/onglet";
+
 export default class Basic extends Component {
   render() {
     return (
@@ -38,8 +40,10 @@ export default class Basic extends Component {
           <Panel>
             <TodoApp />
           </Panel>
-          <Panel>shopping cart go here</Panel>
-          <Panel>Ashynchonisation go out here</Panel>
+          <Panel>
+            <OngletApp />{" "}
+          </Panel>
+          <Panel>Asynchronous</Panel>
         </PanelList>
       </Tabs>
     );
