@@ -7,6 +7,8 @@ import { Introduction } from "../../../components/introduction";
 
 import { OngletApp } from "../../../components/onglet";
 
+
+
 export default class Basic extends Component {
   render() {
     return (
@@ -43,7 +45,9 @@ export default class Basic extends Component {
           <Panel>
             <OngletApp />{" "}
           </Panel>
-          <Panel>Asynchronous</Panel>
+          <Panel>
+                 Asynchronous
+          </Panel>
         </PanelList>
       </Tabs>
     );
