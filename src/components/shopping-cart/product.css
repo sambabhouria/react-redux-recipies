@@ -1,0 +1,18 @@
+.products {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.products tr {
+  background-color: #f5f5f5;
+}
+
+/* .add-cart-button {
+      text-align: right;
+      align:"right"; this work when you apply it in the jsx file as td attribut
+ } */
+
+table td:nth-child(2) {
+  text-align: right;
+}

@@ -3,7 +3,7 @@ import { combineReducers } from "redux";
 import {
   RECEIVE_PRODUCTS,
   ADD_TO_CART,
-} from "../../constants/products/ActionTypes";
+} from "../../../constants/products/ActionTypes";
 
 const products = (state, action) => {
   switch (action.type) {

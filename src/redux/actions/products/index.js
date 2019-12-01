@@ -18,13 +18,16 @@ const addToCartUnsafe = productId => ({
 });
 
 export const addToCart = productId => (dispatch, getState) => {
-  if (getState().products.byId[productId].inventory > 0) {
+  if (
+    getState().combineShoppingCartReducers.products.byId[productId].inventory >
+    0
+  ) {
     dispatch(addToCartUnsafe(productId));
   }
 };
 
 export const checkout = products => (dispatch, getState) => {
-  const { cart } = getState();
+  const { cart } = getState().combineShoppingCartReducers;
 
   dispatch({
     type: types.CHECKOUT_REQUEST,

@@ -7,7 +7,7 @@ import { Introduction } from "../../../components/introduction";
 
 import { OngletApp } from "../../../components/onglet";
 
-
+import { ShoppingCartApp } from "../../../containers/shopping-cart";
 
 export default class Basic extends Component {
   render() {
@@ -43,10 +43,10 @@ export default class Basic extends Component {
             <TodoApp />
           </Panel>
           <Panel>
-            <OngletApp />{" "}
+            <ShoppingCartApp />
           </Panel>
           <Panel>
-                 Asynchronous
+            <OngletApp />
           </Panel>
         </PanelList>
       </Tabs>
