@@ -4,10 +4,10 @@ import { Tabs, TabList, Tab, PanelList, Panel } from "../elements";
 import { CounterApp } from "../../../components/counter";
 import { TodoApp } from "../../../components/todos";
 import { Introduction } from "../../../components/introduction";
-
-import { OngletApp } from "../../../components/onglet";
-
+// import { OngletApp } from "../../../components/onglet";
 import { ShoppingCartApp } from "../../../containers/shopping-cart";
+import  AsyncApp  from "../../../containers/async/async-app.js";
+
 
 export default class Basic extends Component {
   render() {
@@ -46,7 +46,8 @@ export default class Basic extends Component {
             <ShoppingCartApp />
           </Panel>
           <Panel>
-            <OngletApp />
+            {/* <OngletApp /> */}
+             <AsyncApp />
           </Panel>
         </PanelList>
       </Tabs>
