@@ -67,7 +67,7 @@ export default class extends PureComponent {
                           : ""
                       }
                     >
-                      Redux
+                      React-Redux
                     </Button>
                     <Button
                       btnStyle="flat"

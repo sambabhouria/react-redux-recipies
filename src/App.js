@@ -36,7 +36,7 @@ class App extends Component {
           >
             Default Theme
           </Button>
-          <Button
+          {/* <Button
             btnStyle={this.state.theme === "styled" ? "primary" : "flat"}
             className={"navbar-btn"}
             onClick={() => {
@@ -44,7 +44,7 @@ class App extends Component {
             }}
           >
             Styled Component
-          </Button>
+          </Button> */}
         </Navbar>
         <div
           style={{
