@@ -1,3 +1,3 @@
-import KanbanBoardApp from "./kanban-board-app";
+import KanbanBoardContainer from './kanban-board-app';
 
-export { KanbanBoardApp };
+export  { KanbanBoardContainer };
