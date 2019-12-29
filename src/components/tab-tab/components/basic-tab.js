@@ -6,7 +6,7 @@ import { TodoApp } from "../../../components/todos";
 import { Introduction } from "../../../components/introduction";
 // import { OngletApp } from "../../../components/onglet";
 import { ShoppingCartApp } from "../../../containers/shopping-cart";
-import  AsyncApp  from "../../../containers/async/async-app.js";
+import  AsyncApp  from "../../../containers/async/async-app";
 
 
 export default class Basic extends Component {

@@ -8,6 +8,8 @@ import SideNav, { NavItem, NavIcon, NavText } from "./SideNav";
 import { Home } from "../../components/home";
 import { ReduxTpics } from "../../components/redux-topics";
 
+import { KanbanBoardApp } from "../../components/kanban-board-app";
+
 const Main = styled.main`
   position: relative;
   overflow: hidden;
@@ -72,12 +74,12 @@ export default class extends PureComponent {
                     <Button
                       btnStyle="flat"
                       onClick={() =>
-                        location.pathname !== "/rapports"
-                          ? history.push("/rapports")
+                        location.pathname !== "/kanbanboard"
+                          ? history.push("/kanbanboard")
                           : ""
                       }
                     >
-                      Rapports
+                      Kanban Board
                     </Button>
                     <Dropdown>
                       <Dropdown.Toggle>Settings</Dropdown.Toggle>
@@ -136,7 +138,7 @@ export default class extends PureComponent {
                         Redux
                       </NavText>
                     </NavItem>
-                    <NavItem eventKey="reports">
+                    <NavItem eventKey="kanbanboard">
                       <NavIcon>
                         <i
                           className="fa fa-fw fa-list-alt"
@@ -146,8 +148,8 @@ export default class extends PureComponent {
                           }}
                         />
                       </NavIcon>
-                      <NavText style={{ paddingRight: 32 }} title="Reports">
-                        Reports
+                      <NavText style={{ paddingRight: 32 }} title="Kanban">
+                        Kanban Board
                       </NavText>
                     </NavItem>
                     <NavItem eventKey="settings">
@@ -177,6 +179,11 @@ export default class extends PureComponent {
                       <Route path="/redux">
                         <ReduxTpics />
                       </Route>
+
+                       <Route path="/kanbanboard">
+                        <KanbanBoardApp />
+                      </Route>
+                      
                     </Switch>
                   </main>
                 </Main>

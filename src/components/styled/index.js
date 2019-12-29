@@ -91,7 +91,7 @@ export default class extends PureComponent {
   pageTitle = {
     home: "Home",
     devices: ["Devices"],
-    reports: ["Reports"],
+    reportss: ["Reports"],
     "settings/policy": ["Settings", "Policy"],
     "settings/network": ["Settings", "Network"],
   };
