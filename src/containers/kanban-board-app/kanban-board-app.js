@@ -24,10 +24,29 @@ class KanbanBoardContainer extends Component {
         .catch((error) => {
           console.log('Error fetching and parsing data', error);
       });
-    
+
     }
-  render() {
-        return <KanbanBoard cards={this.state.cards} />
+
+    addTask(cardId, taskName){
+
+    }
+    deleteTask(cardId, taskId, taskIndex){
+
+    }
+
+    toggleTask(cardId, taskId, taskIndex){
+
+    }
+     render() {
+
+        return <KanbanBoard
+                   cards={this.state.cards}
+                   taskCallbacks={{
+                   toggle: this.toggleTask.bind(this),
+                   delete: this.deleteTask.bind(this),
+                   add: this.addTask.bind(this) }}
+
+        />
   }
 }
 export default KanbanBoardContainer;
