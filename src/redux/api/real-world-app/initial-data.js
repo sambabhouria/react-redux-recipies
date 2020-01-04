@@ -1,4 +1,4 @@
-import { PRODUCTS, SUPPLIERS } from "../real-world-app/initial-data";
+import { PRODUCTS, SUPPLIERS } from "../../constants/real-world-app/data-types";
 
 export const initialData = {
     modelData: {
