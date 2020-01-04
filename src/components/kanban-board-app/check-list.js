@@ -9,7 +9,7 @@ class CheckList extends Component {
        }
   }
 
-  
+
   render() {
 
     let tasks = this.props.tasks.map((task, taskIndex) => (

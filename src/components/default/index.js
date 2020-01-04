@@ -82,17 +82,25 @@ export default class extends PureComponent {
                       Kanban Board
                     </Button>
                     <Dropdown>
-                      <Dropdown.Toggle>Settings</Dropdown.Toggle>
+                      <Dropdown.Toggle>Complete React App</Dropdown.Toggle>
                       <Dropdown.Menu>
                         <MenuItem
-                          onClick={() => history.push("settings/policies")}
+                          onClick={() =>
+                            location.pathname !== "/reactapp/globalstore"
+                              ? history.push("/reactapp/globalstore")
+                              : ""
+                          }
                         >
-                          Policies
+                          App Global Store
                         </MenuItem>
                         <MenuItem
-                          onClick={() => history.push("settings/network")}
+                          onClick={() =>
+                            location.pathname !== "/reactapp/reduxstore"
+                              ? history.push("/reactapp/reduxstore")
+                              : ""
+                          }
                         >
-                          Network
+                          App Redux Data Store
                         </MenuItem>
                       </Dropdown.Menu>
                     </Dropdown>
@@ -152,21 +160,21 @@ export default class extends PureComponent {
                         Kanban Board
                       </NavText>
                     </NavItem>
-                    <NavItem eventKey="settings">
+                    <NavItem eventKey=" CompleteReactApp">
                       <NavIcon>
                         <i
                           className="fa fa-fw fa-cogs"
                           style={{ fontSize: "1.5em", verticalAlign: "middle" }}
                         />
                       </NavIcon>
-                      <NavText style={{ paddingRight: 32 }} title="Settings">
-                        Settings
+                      <NavText style={{ paddingRight: 32 }} title=" Complete React App">
+                      Complete React App
                       </NavText>
-                      <NavItem eventKey="settings/policies">
-                        <NavText title="Policies">Policies</NavText>
+                      <NavItem eventKey="reactapp/globalstore">
+                      <NavText title="GlobalStore"> App Global Store</NavText>
                       </NavItem>
-                      <NavItem eventKey="settings/network">
-                        <NavText title="Network">Network</NavText>
+                      <NavItem eventKey="reactapp/reduxstore">
+                        <NavText title="ReduxStore">App Redux Data Store</NavText>
                       </NavItem>
                     </NavItem>
                   </SideNav.Nav>
@@ -183,7 +191,14 @@ export default class extends PureComponent {
                        <Route path="/kanbanboard">
                         <KanbanBoardApp />
                       </Route>
-                      
+
+                      <Route path="reactapp/globalstore">
+                         <div>global store</div>
+                      </Route>
+                      <Route path="reactapp/reduxstore">
+                         <div>reudx store</div>
+                      </Route>
+
                     </Switch>
                   </main>
                 </Main>
