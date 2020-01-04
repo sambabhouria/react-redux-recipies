@@ -6,6 +6,9 @@ import React, { PureComponent, Fragment } from "react";
 import styled from "styled-components";
 import SideNav, { NavItem, NavIcon, NavText } from "./SideNav";
 import { Home } from "../../components/home";
+import { RealWorldApp } from "../../components/real-world-app";
+
+
 import { ReduxTpics } from "../../components/redux-topics";
 
 import { KanbanBoardApp } from "../../components/kanban-board-app";
@@ -82,12 +85,12 @@ export default class extends PureComponent {
                       Kanban Board
                     </Button>
                     <Dropdown>
-                      <Dropdown.Toggle>Complete React App</Dropdown.Toggle>
+                      <Dropdown.Toggle>Real World React App</Dropdown.Toggle>
                       <Dropdown.Menu>
                         <MenuItem
                           onClick={() =>
-                            location.pathname !== "/reactapp/globalstore"
-                              ? history.push("/reactapp/globalstore")
+                            location.pathname !== "/globalstore"
+                              ? history.push("/globalstore")
                               : ""
                           }
                         >
@@ -95,8 +98,8 @@ export default class extends PureComponent {
                         </MenuItem>
                         <MenuItem
                           onClick={() =>
-                            location.pathname !== "/reactapp/reduxstore"
-                              ? history.push("/reactapp/reduxstore")
+                            location.pathname !== "/reduxstore"
+                              ? history.push("/reduxstore")
                               : ""
                           }
                         >
@@ -168,12 +171,12 @@ export default class extends PureComponent {
                         />
                       </NavIcon>
                       <NavText style={{ paddingRight: 32 }} title=" Complete React App">
-                      Complete React App
+                         Real World React App
                       </NavText>
-                      <NavItem eventKey="reactapp/globalstore">
+                      <NavItem eventKey="globalstore">
                       <NavText title="GlobalStore"> App Global Store</NavText>
                       </NavItem>
-                      <NavItem eventKey="reactapp/reduxstore">
+                      <NavItem eventKey="reduxstore">
                         <NavText title="ReduxStore">App Redux Data Store</NavText>
                       </NavItem>
                     </NavItem>
@@ -192,13 +195,12 @@ export default class extends PureComponent {
                         <KanbanBoardApp />
                       </Route>
 
-                      <Route path="reactapp/globalstore">
-                         <div>global store</div>
+                      <Route path="/globalstore" >
+                           <RealWorldApp />
                       </Route>
-                      <Route path="reactapp/reduxstore">
-                         <div>reudx store</div>
+                      <Route path="/reduxstore">
+                           <RealWorldApp />
                       </Route>
-
                     </Switch>
                   </main>
                 </Main>
