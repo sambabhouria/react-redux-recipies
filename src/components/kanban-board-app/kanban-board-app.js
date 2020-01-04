@@ -3,7 +3,6 @@ import Tabs from '../../components/onglet/tabs';
 import ReactMarkdown from 'react-markdown';
 import readmePath from './Readme.md';
 import {KanbanBoardContainer} from '../../containers/kanban-board-app';
-import KanbanBoard from './kanban-board';
 import './kanban.css';
 const style = {
   marginTop: '8px',
@@ -75,7 +74,6 @@ const KanbanBoardApp = () => {
         </div>
       </div>
       <div label="Kanban Board">
-        {/* <KanbanBoard cards={cardsList} /> */}
 		 <KanbanBoardContainer cards={cardsList} />
       </div>
       <div label="Board">{child1}</div>

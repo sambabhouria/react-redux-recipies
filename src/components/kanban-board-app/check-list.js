@@ -8,6 +8,8 @@ class CheckList extends Component {
           evt.target.value = '';
        }
   }
+
+  
   render() {
 
     let tasks = this.props.tasks.map((task, taskIndex) => (
