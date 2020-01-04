@@ -2,9 +2,7 @@ import React, { Component } from "react";
 import ProductsAndSuppliers from "./products-and-suppliers";
 
 
-import  './real-world-app.css';
-
-class RealWorldApp extends Component {
+class RealWorldAppGlobaleStore extends Component {
 
   render() {
 
@@ -13,4 +11,4 @@ class RealWorldApp extends Component {
 }
 }
 
-export default RealWorldApp;
+export default RealWorldAppGlobaleStore;

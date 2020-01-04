@@ -6,13 +6,9 @@ import React, { PureComponent, Fragment } from "react";
 import styled from "styled-components";
 import SideNav, { NavItem, NavIcon, NavText } from "./SideNav";
 import { Home } from "../../components/home";
-import { RealWorldApp } from "../../components/real-world-app";
-
-
+import { RealWorldAppGlobaleState, RealWorldAppReduxStore } from "../../components/real-world-app";
 import { ReduxTpics } from "../../components/redux-topics";
-
 import { KanbanBoardApp } from "../../components/kanban-board-app";
-
 const Main = styled.main`
   position: relative;
   overflow: hidden;
@@ -196,10 +192,10 @@ export default class extends PureComponent {
                       </Route>
 
                       <Route path="/globalstore" >
-                           <RealWorldApp />
+                           <RealWorldAppGlobaleState />
                       </Route>
                       <Route path="/reduxstore">
-                           <RealWorldApp />
+                           <RealWorldAppReduxStore />
                       </Route>
                     </Switch>
                   </main>
