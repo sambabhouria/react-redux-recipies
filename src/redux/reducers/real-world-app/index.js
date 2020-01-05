@@ -1,9 +1,10 @@
 import { combineReducers } from "redux";
 import modelReducer from "./model-reducer";
-
+import stateReducer from "./state-reducer";
 
 export default combineReducers({
     modelData: modelReducer,
+    stateData: stateReducer
   });
 
 
