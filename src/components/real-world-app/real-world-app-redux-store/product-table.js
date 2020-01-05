@@ -9,7 +9,7 @@ export class ProductTable extends Component {
                     <tr>
                         <th colSpan="5"
                                 className="bg-primary text-white text-center h4 p-2">
-                            Products
+                            Products Redux Table
                         </th>
                     </tr>
                     <tr>
