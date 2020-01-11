@@ -1,5 +1,5 @@
 {
-  "card": [
+  "cards": [
     {"id":1,"title":"Read the Book","description":"I should read the **whole** book","color":"#BD8D31","status":"in-progress","tasks":[],"_id":"Ej1zBHgEuZOlS42o"},
     {"id":2,"title":"Write some code","description":"Code along with the samples in the book. The complete source can be found at [github](https://github.com/pro-react)","color":"#3A7E28","status":"in-progress","tasks":[{"id":1,"name":"ContactList Example","done":true},{"id":2,"name":"Kanban Example","done":false},{"id":3,"name":"My own experiments","done":true},{"id":1460476575866,"name":"new task","done":false},{"id":1460476734716,"name":"one more","done":false}],"_id":"Hof8jKGHtfs1qLN3"},
     {"id":3,"title":"Clean up application","description":"Do some cleanup on front and back sides","status":"todo","color":"#5562c9","tasks":[{"id":1460407176183,"name":"cleanup ui","done":false},{"id":1460407179149,"name":"cleanup server","done":false}],"_id":"PBtbFRt1LImgYLqi"},
@@ -18,6 +18,104 @@
       "id": 1,
       "body": "some comment",
       "postId": 1
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "product": "Item 1",
+      "category": 1
+    },
+    {
+      "id": 2,
+      "product": "Item 2",
+      "category": 1
+    },
+    {
+      "id": 3,
+      "product": "Item 1",
+      "category": 2
+    },
+    {
+      "id": 4,
+      "product": "Item 1, s",
+      "category": 4
+    },
+    {
+      "product": "Soap",
+      "category": "1",
+      "id": 5
+    },
+    {
+      "product": "hammer",
+      "category": "4",
+      "id": 6
+    },
+    {
+      "product": "Goat",
+      "category": "6",
+      "id": 7
+    },
+    {
+      "product": "Goat",
+      "category": "6",
+      "id": 8
+    },
+    {
+      "product": "goat",
+      "category": "6",
+      "id": 9
+    },
+    {
+      "product": "Goat",
+      "category": "6",
+      "id": 10
+    },
+    {
+      "product": "new",
+      "category": "3",
+      "id": 11
+    },
+    {
+      "product": "test",
+      "category": "1",
+      "id": 12
+    },
+    {
+      "product": "meat",
+      "category": "2",
+      "id": 13
+    },
+    {
+      "product": "cow",
+      "category": "6",
+      "id": 14
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "category": "Cleaning up"
+    },
+    {
+      "id": 2,
+      "category": "Food"
+    },
+    {
+      "id": 3,
+      "category": "Utilities"
+    },
+    {
+      "category": "tools",
+      "id": 4
+    },
+    {
+      "category": "new",
+      "id": 5
+    },
+    {
+      "category": "Milks",
+      "id": 6
     }
   ],
   "profile": {

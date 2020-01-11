@@ -3,14 +3,14 @@ import update from 'react-addons-update';
 // Polyfills
 import 'babel-polyfill';
 import 'whatwg-fetch';
-
 import KanbanBoard from '../../components/kanban-board-app/kanban-board';
+
+import Api from '../../api'
 
 const API_HEADERS = {
 'Content-Type': 'application/json',
  'Accept': 'application/json'
 };
-
 
 class KanbanBoardContainer extends Component {
   constructor() {
@@ -25,19 +25,18 @@ class KanbanBoardContainer extends Component {
         return this.state.cards.findIndex((card) => card.id === cardId);
    }
 
+    componentDidMount() {
+       this.loadCards()
+    }
 
-   componentDidMount() {
-
-     fetch(`card.json`, {headers: API_HEADERS})
-        .then((response) => response.json())
-        .then((responseData) => {
-           this.setState({cards: responseData});
-           window.state = this.state;
-        })
-        .catch((error) => {
-          console.log('Error fetching and parsing data', error);
-      });
-
+    loadCards =()=> {
+     Api.loadCards().then(resp => {
+       this.setState({ cards: resp.data });
+       window.state = this.state;
+     })
+     .catch((error) => {
+      console.log('Error fetching and parsing data', error);
+     });
     }
 
     addTask(cardId, taskName){
@@ -122,7 +121,7 @@ class KanbanBoardContainer extends Component {
           // in case you need to revert the optimistic changes in the UI
           let prevState = this.state;
           // Find the index of the card
-          let cardIndex = this.state.cards.findIndex((card)=>card.id == cardId);
+          let cardIndex = this.state.cards.findIndex((card)=>card.id === cardId);
           // Save a reference to the task's 'done' value
           let newDoneValue;
           // Using the $apply command, you will change the done value to its opposite,

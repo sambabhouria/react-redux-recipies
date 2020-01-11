@@ -21,6 +21,7 @@ class App extends Component {
 	};
 
 	render() {
+
 		const name = 'React-Redux Eco System';
 		const url = 'https://github.com/sambabhouria';
 
